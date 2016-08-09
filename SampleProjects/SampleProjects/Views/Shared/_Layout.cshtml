@@ -493,28 +493,23 @@
                             XCM Solutions, LLC SS
                         </div>
                         <div class="item">
-
                             <a href="/xcmv2/CPAUtilities"><div class="sprite cog_wheel" title="Utilities"></div></a>
                         </div>
                         <div class="item" style="display:none">
                             <i class="alarm outline icon"></i>
                         </div>
                         <div id="profilelnk" class="ui pointing dropdown item userprofile" style="padding:0.8em 0.6em 0.8em 2em;@*background-color:rgb(100, 121, 152);border-top-left-radius: 25px;border-bottom-left-radius: 25px;*@letter-spacing: 1px;font-family: museo-500;">
-                            Sulkunte, Sanjath   <i class="dropdown icon"></i>
+                            Bhagyaraj, Gowda<i class="dropdown icon"></i>
                             <div class="menu" style="z-index:1000;">
-                                <a class="item">Profile</a>
-                                <form action="/xcmv2/account/logoff" id="logoutform" method="post"><input name="__RequestVerificationToken" type="hidden" value="NsGyGKfMcgE32UYR9AvttxqqMk64okOfCJl_79G_eHyVVtjA4_kJozP6C1oqElMc8cDelA0HOWuPblOWTvxy-T9UI1PGK_GA9EdZ83LjIig_lHgmFTM4AHYnhBSwcxrOdFn9wnmj_9dOV1IsBEErdw2" /></form>                                    <a class="item" id="myCalender" onclick="window.open(window.routemap + 'OldCalender', 'Calendar', 'top=30,left=250,height=600,width=1000,status=yes,scrollbars=yes,resizable=yes', '_blank')">My Calendar</a>
-
+                                <a class="item">Profile</a>                                
                                 <a class="item" href="javascript:document.getElementById('logoutform').submit()">Log Off</a>
                             </div>
                         </div>
                     </div>
                     @RenderSection("subheader", false)
-                </div>
-                @RenderBody()
+                </div>                
             </header>
-
-
+            @RenderBody()
         </div>
 
         <div id="pagefooter" class="row">
@@ -523,26 +518,19 @@
                     <p>&copy; 2016 <a href="http://xcmsolutions.com">XCM Solutions LLC</a>, All rights reserved.</p>
                 </div>
             </footer>
-
         </div>
 
     </div>
     <div id="dialogPanel"></div>
-    <script src="~/Scripts/xcm scripts/workspace.debug.js"></script>
-    <script src="~/Scripts/xcm scripts/handsontable.full.min.js"></script>
-    <script src="~/Scripts/xcm scripts/vendor.min.js"></script>
-    <script>
-        var content = [
-        { title: 'ABC Company' },
-        { title: 'A&A CO.' },
-        { title: 'Able,Jake ' },
-        { title: 'ABM Enterprises' },
-        { title: 'Acme Corp.' },
-        { title: 'ACME Corporation' },
-        { title: 'Adams Audio' },
-        { title: 'Adams,John' }
-        ];
 
+    <script src="~/Scripts/jquery-3.1.0.js"></script>
+    <script src="~/Scripts/semantic.js"></script>
+    <script src="~/Scripts/underscore.js"></script>
+    <script src="~/Scripts/backbone.js"></script>
+    <script src="~/Scripts/backbone.marionette.js"></script>
+
+
+    <script>
         $(function () {
             $('a#myviewlink').addClass('active');
 
@@ -556,31 +544,25 @@
                 'quicksearch': window.routemap + 'api/firmsettings/autosuggestclients?term={query}',
             };
 
-            $('.menu .item').tab();
-            $('#dashboardlink , a[data-content]').popup();
+            $('.menu .item').tab();            
 
-            function showhideButtons() {
-                //if needed can add the addtask buttons also in the selector, provided it is disabled in the template i.e jst
-                //as the template renders on navigation from bucket to bucket.
-                var buttons = $('#subheader > a, #subheader .viewdropdown');
+            //function showhideButtons() {
 
-                //initially disable clicks if ajax is in progess
-                if (jQuery.active > 0) {
-                    buttons.addClass('disabled'); //disable clicks
-                }
+            //    //initially disable clicks if ajax is in progess
+            //    if (jQuery.active > 0) {
+            //        buttons.addClass('disabled');
+            //    }
 
-                jQuery(document).ajaxSend(function (e) {
-                    buttons.addClass('disabled'); //enable clicks
-                });
+            //    jQuery(document).ajaxSend(function (e) {
+            //        buttons.addClass('disabled');
+            //    });
 
-                jQuery(document).ajaxStop(function () {
-                    if (jQuery.active == 0) {
-                        buttons.removeClass('disabled');
-                    }
-                });
-            }
-
-            //showhideButtons();
+            //    jQuery(document).ajaxStop(function () {
+            //        if (jQuery.active == 0) {
+            //            buttons.removeClass('disabled');
+            //        }
+            //    });
+            //}            
 
         });
     </script>

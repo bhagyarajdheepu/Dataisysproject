@@ -418,9 +418,6 @@
     <Content Include="Scripts\semantic.min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
-    <Content Include="Scripts\xcm scripts\handsontable.full.min.js" />
-    <Content Include="Scripts\xcm scripts\vendor.min.js" />
-    <Content Include="Scripts\xcm scripts\workspace.debug.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

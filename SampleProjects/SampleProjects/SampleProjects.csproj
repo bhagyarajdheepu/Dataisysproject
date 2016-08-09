@@ -353,6 +353,15 @@
     <Content Include="Content\themes\basic\assets\fonts\icons.svg" />
     <Content Include="Content\themes\default\assets\fonts\icons.svg" />
     <Content Include="Content\themes\default\assets\images\flags.png" />
+    <Content Include="Content\xcm\core.css" />
+    <Content Include="Content\xcm\dragula.css" />
+    <Content Include="Content\xcm\font.css" />
+    <Content Include="Content\xcm\handsontable.full.min.css" />
+    <Content Include="Content\xcm\images\sprites-new.png" />
+    <Content Include="Content\xcm\images\xcm_logo_white.png" />
+    <Content Include="Content\xcm\pikaday.css" />
+    <Content Include="Content\xcm\select2.css" />
+    <Content Include="Content\xcm\semantic.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -373,6 +382,8 @@
     <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\backbone.min.js" />
     <Content Include="Scripts\backbone.min.map" />
+    <Content Include="Content\xcm\fonts\Museo300-Regular.otf" />
+    <Content Include="Content\xcm\fonts\Museo500-Regular.otf" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\backbone.marionette.js" />
     <Content Include="Scripts\backbone.marionette.min.js" />
@@ -394,6 +405,9 @@
     <Content Include="Scripts\semantic.min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
+    <Content Include="Scripts\xcm scripts\handsontable.full.min.js" />
+    <Content Include="Scripts\xcm scripts\vendor.min.js" />
+    <Content Include="Scripts\xcm scripts\workspace.debug.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -430,6 +444,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\underscore.min.map" />
+    <Content Include="Views\Home\DataManagement.cshtml" />
+    <Content Include="Views\Home\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

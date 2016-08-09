@@ -26,5 +26,17 @@ namespace SampleProjects.Controllers
 
             return View();
         }
+        public ActionResult DataManagement()
+        {
+            ViewBag.Message = "Your DataImport page.";
+
+            return View();
+        }
+        public ActionResult Reports()
+        {
+            ViewBag.Message = "Your Reports page.";
+
+            return View();
+        }
     }
 }

@@ -1,0 +1,618 @@
+﻿@import "font.css";
+@import "handsontable.full.min.css";
+@import "semantic.min.css";
+
+/*@import url('../../bower_components/semantic-ui/dist/semantic.css');*/
+
+@import "select2.css";
+@import "dragula.css";
+@import "pikaday.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+
+#pagecontent {
+    padding:0;
+    min-height: calc(100vh - 45px);
+}
+
+#pagefooter {
+    padding-bottom:0;
+    padding-top:0;
+    background: rgb(240, 240, 240);
+}
+
+#dgrid thead th,
+#jurisdiction-grid thead th,
+#assembly-grid thead th,
+#shipping-grid thead th,
+#efile-grid thead th,
+#ext-grid thead th,
+#checklists-grid thead th,
+#CPAPortalReqAndQuest-grid thead th,
+#linkedtasks-grid thead th,
+#moveTaskData thead th,
+#all-grid thead th {
+     cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    /*color: #445978;
+            background-color: rgb(231,232,234);*/
+    color: rgb(255, 255, 255);
+    text-align: left;
+    background-color: rgb(102, 122, 155);
+    border: 0px;
+    letter-spacing: 0.6px;
+    border-right: 1px dotted transparent;
+    border-left: 1px dotted transparent;
+}
+
+    #jurisdiction-grid thead th .columnSorting.ascending::after,
+    #jurisdiction-grid thead th .columnSorting.descending::after,
+    #CPAPortalReqAndQuest-grid thead th .columnSorting.ascending::after,
+    #CPAPortalReqAndQuest-grid thead th .columnSorting.descending::after,
+    #linkedtasks-grid thead th .columnSorting.ascending::after,
+    #linkedtasks-grid thead th .columnSorting.descending::after,
+    #assembly-grid thead th .columnSorting.ascending::after,
+    #assembly-grid thead th .columnSorting.descending::after,
+    #shipping-grid thead th .columnSorting.ascending::after,
+    #shipping-grid thead th .columnSorting.descending::after,
+    #efile-grid thead th .columnSorting.ascending::after,
+    #efile-grid thead th .columnSorting.descending::after,
+    #ext-grid thead th .columnSorting.ascending::after,
+    #ext-grid thead th .columnSorting.descending::after,
+    #checklists-grid thead th .columnSorting.ascending::after,
+    #checklists-grid thead th .columnSorting.descending::after,
+    #all-grid thead th .columnSorting.ascending::after,
+    #all-grid thead th .columnSorting.descending::after,
+    #moveTaskData thead th .columnSorting.ascending::after,
+    #moveTaskData thead th .columnSorting.descending::after,
+    #dgrid thead th .columnSorting.ascending::after,
+    #dgrid thead th .columnSorting.descending::after {
+        color: white;
+    }
+
+    #CPAPortalReqAndQuest-grid thead th:hover,
+    #linkedtasks-grid thead th:hover,
+    #jurisdiction-grid thead th:hover,
+    #assembly-grid thead th:hover,
+    #shipping-grid thead th:hover,
+    #efile-grid thead th:hover,
+    #ext-grid thead th:hover,
+    #checklists-grid thead th:hover,
+    #all-grid thead th:hover,
+    #moveTaskData thead th:hover,
+    #dgrid thead th:hover {
+        border-right-color: white;
+        border-left-color: white;
+    }
+
+#CPAPortalReqAndQuest-grid tbody th,
+#linkedtasks-grid tbody th,
+#jurisdiction-grid tbody th,
+#assembly-grid tbody th,
+#shipping-grid tbody th,
+#efile-grid tbody th,
+#ext-grid tbody th,
+#checklists-grid tbody th,
+#all-grid tbody th,
+#moveTaskData tbody th,
+#dgrid tbody th {
+    background-color: rgb(255, 255, 255);
+}
+
+#CPAPortalReqAndQuest-grid tbody tr:nth-child(even) td,
+#CPAPortalReqAndQuest-grid tbody tr:nth-child(even) th,
+#linkedtasks-grid tbody tr:nth-child(even) td,
+#linkedtasks-grid tbody tr:nth-child(even) th,
+#jurisdiction-grid tbody tr:nth-child(even) td,
+#jurisdiction-grid tbody tr:nth-child(even) th,
+#assembly-grid tbody tr:nth-child(even) td,
+#assembly-grid tbody tr:nth-child(even) th,
+#shipping-grid tbody tr:nth-child(even) td,
+#shipping-grid tbody tr:nth-child(even) th,
+#efile-grid tbody tr:nth-child(even) td,
+#efile-grid tbody tr:nth-child(even) th,
+#ext-grid tbody tr:nth-child(even) td,
+#ext-grid tbody tr:nth-child(even) th,
+#checklists-grid tbody tr:nth-child(even) td,
+#checklists-grid tbody tr:nth-child(even) th,
+#all-grid tbody tr:nth-child(even) td,
+#all-grid tbody tr:nth-child(even) th,
+#moveTaskData tbody tr:nth-child(even) td,
+#moveTaskData tbody tr:nth-child(even) th,
+#dgrid tbody tr:nth-child(even) td,
+#dgrid tbody tr:nth-child(even) th {
+    background-color: rgb(248, 248, 248);
+}
+
+
+#CPAPortalReqAndQuest-grid tbody tr th:first-child,
+#linkedtasks-grid tbody tr th:first-child,
+#jurisdiction-grid tbody tr th:first-child,
+#assembly-grid tbody tr th:first-child,
+#shipping-grid tbody tr th:first-child,
+#efile-grid tbody tr th:first-child,
+#ext-grid tbody tr th:first-child,
+#checklists-grid tbody tr th:first-child,
+#all-grid tbody tr th:first-child,
+#moveTaskData tbody tr th:first-child,
+#dgrid tbody tr th:first-child {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(231, 232, 234);
+    /*padding: 1px;*/
+}
+
+#CPAPortalReqAndQuest-grid tbody tr td,
+#linkedtasks-grid tbody tr td,
+#jurisdiction-grid tbody tr td,
+#assembly-grid tbody tr td,
+#shipping-grid tbody tr td,
+#efile-grid tbody tr td,
+#ext-grid tbody tr td,
+#checklists-grid tbody tr td,
+#all-grid tbody tr td,
+#moveTaskData tbody tr td,
+#dgrid tbody tr td {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(231, 232, 234);
+    /*padding:1px;*/
+    text-overflow: ellipsis;
+}
+
+
+    #CPAPortalReqAndQuest-grid tbody tr td:last-child,
+    #linkedtasks-grid tbody tr td:last-child,
+    #jurisdiction-grid tbody tr td:last-child,
+    #assembly-grid tbody tr td:last-child,
+    #shipping-grid tbody tr td:last-child,
+    #efile-grid tbody tr td:last-child,
+    #ext-grid tbody tr td:last-child,
+    #checklists-grid tbody tr td:last-child,
+    #all-grid tbody tr td:last-child,
+    #moveTaskData tbody tr td:last-child,
+    #dgrid tbody tr td:last-child {
+        border-right: none;
+    }
+
+#CPAPortalReqAndQuest-grid .handsontable .relative,
+#linkedtasks-grid .handsontable .relative,
+#jurisdiction-grid .handsontable .relative,
+#assembly-grid .handsontable .relative,
+#shipping-grid .handsontable .relative,
+#efile-grid .handsontable .relative,
+#ext-grid .handsontable .relative,
+#checklists-grid .handsontable .relative,
+#all-grid .handsontable .relative,
+#moveTaskData .handsontable .relative,
+#dgrid .handsontable .relative {
+    width: 100%;
+    /*white-space: nowrap;*/
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#tableStaffbudget thead th, 
+#tableSignoff thead th,
+#portalDocTable th, #taskDetailsShow th, 
+#taskDetailsShowActualTime th {
+    /*background-color: rgb(102, 122, 155);
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(255, 255, 255);*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    background-color: rgb(102, 122, 155);
+    border: 0px;
+}
+
+#portalDocTable th {
+    padding: 5px !important;
+}
+
+#tableStaffbudget, #tableStaffbudget tfoot th, 
+#tableSignoff, 
+div[data-section="engagement"] > div.ui.attached.segment, 
+#taskDetailsShow, #taskDetailsShowActualTime {
+    border: 0;
+}
+
+#tableSignoff thead tr:first-child>th:last-child, 
+#tableSignoff thead tr:first-child>th:first-child,
+#tableStaffbudget thead tr:first-child>th:last-child,
+#tableStaffbudget thead tr:first-child>th:first-child,
+#taskDetailsShow thead tr:first-child>th:last-child,
+#taskDetailsShow thead tr:first-child>th:first-child,
+#taskDetailsShowActualTime thead tr:first-child>th:last-child,
+#taskDetailsShowActualTime thead tr:first-child>th:first-child {
+    border-radius: 0!important;
+}
+
+
+.roleindicator {
+    border-width: 2px !important;
+    margin: 0 0 !important;
+    /*margin-bottom: 0.3em !important;*/
+    margin-bottom: 0.2em !important;
+    border-color: grey !important;
+}
+
+    .roleindicator.supportstaff {
+        border-color: orange !important;
+    }
+
+    .roleindicator.preparer {
+        border-color: teal !important;
+    }
+
+    .roleindicator.taxpartner {
+        border-color: olive !important;
+    }
+
+    .roleindicator.staff {
+        border-color: forestgreen !important;
+    }
+
+.roleindicatorheader {
+    height: 5px !important;
+    background-color: white !important;
+}
+
+.customBorder span.colHeader:after {
+    content: '';
+    background-color:transparent;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    width: 0;
+    border-top: 24px solid #CE2029;
+    border-left: 19px solid transparent;
+    /*background-color: rgb(100, 121, 152); old setting*/
+    /*height: 100px; old setting*/
+    /*border-bottom: 20px solid #475a78; old setting*/
+    /*border-left: 19px solid rgb(102, 122, 155); old setting*/
+
+}
+
+.borderHeader::after {
+    position: absolute;
+    content: "";
+    margin: 0px;
+    background: transparent none repeat scroll 0px 0px;
+    width: 1em;
+    border-image: none;
+    z-index: 11;
+    border-bottom: 2px solid blue;
+}
+
+
+.moduleheader {
+    color: #425b79 !important;
+    font-family: museo-500 !important;
+    letter-spacing: 1px;
+}
+
+.modulesubheader a,
+.modulebutton {
+    color: #425b79 !important;
+    opacity: 1 !important;
+    font-family: museo-300 !important;
+}
+
+    .modulebutton.active {
+        background-color: transparent;
+        color: #e07b53 !important;
+    }
+
+    .modulebutton i.plus {
+        opacity: 1 !important;
+        color: white !important;
+    }
+
+.customBorder {
+    /*border-bottom: 1px solid blue !important;*/
+}
+
+.hidden {
+    display: none;
+}
+
+.hideItem {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/*.visible {
+    display: block;
+}*/
+
+table {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.handsontable th,
+.handsontable td {
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 0 6px 0 4px;
+}
+
+.handsontable thead th .relative {
+    padding: 2px 6px 2px 2px;
+}
+
+#profilelnk:hover {
+    background: none;
+}
+
+.handsontableInputHolder {
+    z-index: 200;
+}
+
+    .handsontableInputHolder .ht_master .wtHolder {
+        overflow: auto !important;
+    }
+
+
+/*.handsontable .wtHolder {
+    width: 250px;
+}
+.handsontable table.htCore {
+    width: 250px;
+}*/
+
+
+/*span.colHeader:not(.customBorder):after{
+    content: '';
+    background-color: rgb(163, 163, 163);
+    position: absolute;
+    top: 0px;
+    right: -12px;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 19px solid rgb(245,245,245);
+}*/
+
+
+
+.sprite {
+    /*background: url('./images/sprite.png') no-repeat top left;*/
+    background: url('./images/sprites-new.png') no-repeat top left;
+    width: 24px;
+    height: 29px;
+    padding: 15px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+    .sprite + p {
+        cursor: pointer;
+    }
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid rgba(39, 41, 43, .15);
+}
+
+
+/*.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: rgba(39, 41, 43, .5);
+}*/
+
+.select2-container--default.select2-container--disabled .select2-selection--multiple {
+    background-color: rgba(39, 41, 43, .03);
+}
+
+.ui.toggle.checkbox .box:before,
+.ui.toggle.checkbox label:before {
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.sprite.add_details {
+    background-position: 0 0;
+    width: 22px;
+    height: 25px;
+}
+
+.sprite.add_option {
+    background-position: -32px 0;
+    height: 22px;
+}
+
+.sprite.advance_search {
+    background-position: -62px 0;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.calender {
+    background-position: -98px 0;
+}
+
+.sprite.calender_hover {
+    background-position: -128px 0;
+}
+
+.sprite.clear_file {
+    background-position: -158px 0;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.clone {
+    background-position: -194px 0;
+}
+
+.sprite.clone_hover {
+    background-position: -224px 0;
+}
+
+.sprite.close_window {
+    background-position: -254px 0;
+}
+
+.sprite.cog_wheel {
+    background-position: -284px 0;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.column_list {
+    background-position: -320px 0;
+}
+
+.sprite.create_extensions {
+    background-position: -350px 0;
+    width: 28px;
+    height: 25px;
+}
+
+.sprite.delete {
+    background-position: -388px 0;
+}
+
+.sprite.delete_alternative {
+    background-position: -418px 0;
+}
+
+.sprite.delete_hover {
+    background-position: -448px 0;
+}
+
+.sprite.download {
+    background-position: -478px 0;
+}
+
+.sprite.download_hover {
+    background-position: -508px 0;
+}
+
+.sprite.edit {
+    background-position: -538px 0;
+}
+
+.sprite.edit_hover {
+    background-position: -568px 0;
+}
+
+.sprite.export_excel {
+    background-position: -598px 0;
+}
+
+.sprite.file {
+    background-position: -628px 0;
+    height: 22px;
+}
+
+.sprite.filter_off {
+    background-position: -658px 0;
+}
+
+.sprite.filter_on {
+    background-position: -688px 0;
+}
+
+.sprite.info {
+    background-position: -718px 0;
+    width: 25px;
+    height: 25px;
+}
+
+.sprite.info_alternative {
+    background-position: -753px 0;
+}
+
+.sprite.info_graphic {
+    background-position: -783px 0;
+}
+
+.sprite.move_task {
+    background-position: -813px 0;
+    height: 22px;
+}
+
+.sprite.multisort_off {
+    background-position: -843px 0;
+    width: 25px;
+}
+
+.sprite.multisort_on {
+    background-position: -878px 0;
+    width: 25px;
+}
+
+.sprite.play {
+    background-position: -913px 0;
+}
+
+.sprite.play_hover {
+    background-position: -943px 0;
+}
+
+.sprite.refresh {
+    background-position: -973px 0;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.sort {
+    background-position: -1009px 0;
+}
+
+.sprite.task_info {
+    background-position: -1039px 0;
+    width: 21px;
+    height: 25px;
+}
+
+.sprite.task_issues {
+    background-position: -1070px 0;
+    height: 25px;
+}
+
+.sprite.delete:hover {
+    background-position: -448px 0;
+}
+
+.sprite.edit:hover {
+    background-position: -568px 0;
+}
+
+.sprite.play:hover {
+    background-position: -943px 0;
+}
+
+.disabled {
+    cursor: default;
+    background-color: #dcddde !important;
+    color: rgba(0, 0, 0, .4) !important;
+    opacity: .3 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    pointer-events: none;
+}
+
+.editedFileds {
+    color: rgba(226,122,19,1) !important;
+}
+
+/*.sprite.issues { background-position: 0 0; }
+.sprite.filter { background-position: -34px 0; }
+.sprite.create_ext { background-position: -68px 0; }
+.sprite.excel_export { background-position: -102px 0; }
+.sprite.column_view { background-position: -136px 0; }
+.sprite.sort { background-position: -170px 0; }
+.sprite.task_info { background-position: -204px 0; }
+.sprite.tharrow { background-position: -238px 0;width: 33px;height: 44px;}
+.sprite.xcm_logo { background-position: -281px 0;width: 420px;height: 105px; }
+.sprite.xcm_logo_colored { background-position: -711px 0;width: 234px;height: 65px; }
+.sprite.xcm_logo_white { background-position: -955px 0;width: 200px;height: 49px; }
+.sprite.move { background-position: -1165px 0;}
+*/

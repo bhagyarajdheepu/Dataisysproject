@@ -471,19 +471,19 @@
 </style>
 <script>
         (function () {
-            window.routemap = '/';
+            window.routemap = '/xcmv2' + '/';
         }());
 </script>
 </head>
 <body style="background-color:white;">
     <div class="ui padded grid">
+
         <div id="pagecontent" class="sixteen wide column">
             <header class="row">
                 <div id="headermenu" class="ui inverted pointing menu" style="margin:0; border-radius:0;background-color: #445978; @*background-color: rgb(68,89,120);*@">
                     <div class="header item" style="padding: 0 1rem;">
                         <img src="~/Content/xcm/images/xcm_logo_white.png" height="20" />
                     </div>
-
                     <a id="myviewlink" class="item @Html.IsActive("Home","Index")" href="/Home/Index">Dashboard</a>
                     <a id="reportslink" class="item @Html.IsActive("Home","DataManagement")" href="/Home/DataManagement">Data Management</a>
                     <a id="schedulerlink" class="item @Html.IsActive("Home","Reports")" href="/Home/Reports">Reports</a>
@@ -509,6 +509,7 @@
                 </div>                
             </header>
             @RenderBody()
+
         </div>
 
         <div id="pagefooter" class="row">
@@ -518,6 +519,7 @@
                 </div>
             </footer>
         </div>
+
     </div>
     <div id="dialogPanel"></div>
     <script src="~/Scripts/jquery-3.1.0.js"></script>

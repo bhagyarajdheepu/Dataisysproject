@@ -209,19 +209,6 @@
     <Compile Include="Utilities\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\Modules\DashboradModule\Controller.js" />
-    <Content Include="App\Modules\DashboradModule\Models.js" />
-    <Content Include="App\Modules\DashboradModule\Module.js" />
-    <Content Include="App\Modules\DashboradModule\Router.js" />
-    <Content Include="App\Modules\DashboradModule\Views.js" />
-    <Content Include="App\Modules\DataImportModule\Module.js" />
-    <Content Include="App\Modules\DataManagementModule\Controller.js" />
-    <Content Include="App\Modules\DataManagementModule\Models.js" />
-    <Content Include="App\Modules\DataManagementModule\Module.js" />
-    <Content Include="App\Modules\DataManagementModule\Router.js" />
-    <Content Include="App\Modules\DataManagementModule\Templates.js" />
-    <Content Include="App\Modules\DataManagementModule\Templates\HtmlPage1.html" />
-    <Content Include="App\Modules\DataManagementModule\Views.js" />
     <Content Include="Content\components\accordion.css" />
     <Content Include="Content\components\accordion.js" />
     <Content Include="Content\components\accordion.min.css" />
@@ -459,9 +446,6 @@
     <Content Include="Views\Home\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\Config\" />
-    <Folder Include="App\Modules\HomeModule\" />
-    <Folder Include="App\Templates\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

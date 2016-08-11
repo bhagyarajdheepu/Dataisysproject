@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using SampleProjects.Utilities
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -22,7 +23,7 @@
     }
 
     header .ui.pointing.menu .active.item {
-        background-color: transparent;
+        background-color: transparent;  
     }
 
     header .ui.inverted.menu .item:before {
@@ -483,9 +484,10 @@
                     <div class="header item" style="padding: 0 1rem;">
                         <img src="~/Content/xcm/images/xcm_logo_white.png" height="20" />
                     </div>
-                    <a id="myviewlink" class="item" href="/Home/Index">Dashboard</a>
-                    <a id="reportslink" class="item" href="/Home/DataManagement">Data Management</a>
-                    <a id="schedulerlink" class="item" href="/Home/Reports">Reports</a>
+
+                    <a id="myviewlink" class="item @Html.IsActive("Home","Index")" href="/Home/Index">Dashboard</a>
+                    <a id="reportslink" class="item @Html.IsActive("Home","DataManagement")" href="/Home/DataManagement">Data Management</a>
+                    <a id="schedulerlink" class="item @Html.IsActive("Home","Reports")" href="/Home/Reports">Reports</a>
                     <div class="right menu">
                         <div class="item" id="displayfirmname" style="max-width: 200px;white-space: nowrap;overflow: hidden;color: rgb(247, 178, 51);text-overflow: ellipsis;" data-content="XCM Solutions, LLC SS">
                             XCM Solutions, LLC SS
@@ -528,7 +530,6 @@
 
     <script>
         $(function () {
-            $('a#myviewlink').addClass('active');
 
             $('.ui.dropdown').dropdown();
             $('.ui.checkbox').checkbox();
